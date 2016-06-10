@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
     <script src="js/scripts.js"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Ping Pong</title>
@@ -10,16 +10,18 @@
 
   <body>
     <div id= "page-wrap">
-      <h1>Wanna Play Ping Pong?</h1>
-      <img src="img/pingpong.jpg" alt="ladies playing ping pong" />
+      <h1>Ping Pong</h1>
+      <img src="img/pong-cat.gif" alt="catplaying ping pong" />
     <h2>Input A Number</h2>
-    <form id="number">
-     <input id="usernumber" class="form-control" type="number">
+    <form id="form-play">
+     <input id="play" class="form-control" type="number">
      <button type="submit" class="btn btn-info" name="button">Submit</button>
     </form>
 
-    <ul class= "results">
-    </ul>
+    <div id="pingpongresult">
+      <ul class="results">
+      </ul>
+    </div>
     </div>
   </body>
 </html>

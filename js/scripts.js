@@ -1,29 +1,34 @@
-$(document).ready(function(){
-
 // Business Logic
-var   = function(userNumber) {
+var pingpong = function(userNumber) {
+var inputArray = [];
 
-   var inputArray = [];
-
-   for ( var i = 0; i<userNumber.length; i +1){
-     if (index % 15 === 0) {
-       inputArray.push("pingpong");
-     } else if (index % 5 === 0) {
-      inputArray.push ("pong");
-    } else if ( index % 3 ==0) {
-      inputArray.push ("ping")
+  for (var i = 1; i<=userNumber; i += 1) {
+    if (i % 15 === 0) {
+      inputArray.push("pingpong");
+      } else if (i % 5 === 0) {
+         inputArray.push("pong");
+      } else if (i % 3 === 0) {
+         inputArray.push("ping");
+      } else {
+         inputArray.push(i);
+      }
 }
   return inputArray;
-    debugger;
+};
 
 // Front End Logic
-    $("form#number").submit(function(event){
+  $(document).ready(function() {
+    $("form#form-play").submit(function(event) {
      event.preventDefault();
 
      $("ul.results li").remove();
-     var results = parseInt($("#usernumber").val());
-     $(".results").show();
+     var userNumber = parseInt($("#play").val());
+     var results = pingpong(userNumber);
+     results.forEach(function(result) {
+       $(".results").append("<li>" + result + "</li>");
+     });
+
+     $("#pingpongresult").show();
 
 });
-}
 });
