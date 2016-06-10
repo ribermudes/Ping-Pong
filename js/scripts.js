@@ -1,5 +1,5 @@
 // Business Logic
-var pingpong = function(userNumber) {
+var pingPong = function(userNumber) {
 var inputArray = [];
 
   for (var i = 1; i<=userNumber; i += 1) {
@@ -23,7 +23,7 @@ var inputArray = [];
 
      $("ul.results li").remove();
      var userNumber = parseInt($("#play").val());
-     var results = pingpong(userNumber);
+     var results = pingPong(userNumber);
      results.forEach(function(result) {
        $(".results").append("<li>" + result + "</li>");
      });
